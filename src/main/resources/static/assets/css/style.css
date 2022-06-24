@@ -1,0 +1,287 @@
+/**
+* Template Name: ComingSoon - v4.6.0
+* Template URL: https://bootstrapmade.com/comingsoon-free-html-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+
+/* background: #9152f8;
+background: -webkit-linear-gradient(top, #56ab2f, #a8e063);
+background: -o-linear-gradient(top, #56ab2f, #a8e063);
+background: -moz-linear-gradient(top, #56ab2f, #a8e063);
+background: linear-gradient(top, #56ab2f, #a8e063); */
+
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #000;
+  background: url("../img/Lab.jpg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.8);
+}
+@media (min-width: 1024px) {
+  body {
+    background-attachment: fixed;
+  }
+}
+
+a {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff3333;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+#main {
+  position: relative;
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 80px;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+  background: #56ab2f;
+}
+#header .logo h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+#header .logo h1 a, #header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+
+}
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+#header .contact-link a {
+  color: #fff;
+  padding-right: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#header .contact-link a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  #header .logo h1 {
+    font-size: 28px;
+    padding: 8px 0;
+  }
+}
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #56ab2f;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top:hover {
+  background: #a8e063;
+  color: #fff;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background-color: #fff5f5;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+}
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Contact Us
+--------------------------------------------------------------*/
+.contact .php-email-form {
+  width: 100%;
+  padding: 30px;
+  padding-top: 0;
+  background: rgba(255,255,255,0.50);
+
+}
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #000;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+.contact .php-email-form input, .contact .php-email-form textarea {
+  border-radius: 0.5;
+  box-shadow: none;
+  font-size: 14px;
+  background: rgba(255,255,255,0.5);
+  /* background: rgba(255, 255, 255, 0.1); */
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  color: #000;
+}
+.contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+.contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}+
+.contact .php-email-form button[type=submit]:hover {
+  background: #a8e063;
+}
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Card
+--------------------------------------------------------------*/
+
+.card{
+  padding: 5px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: rgba(19, 19, 19, 0.4);
+  padding: 30px 0;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+}
+#footer .copyright {
+  text-align: center;
+}
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+#footer .credits a {
+  color: #56ab2f;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>NUEVO SERVICIO</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="/assets/img/Lanuan sis.png" rel="icon">
+        <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="/assets/css/style.css" rel="stylesheet">
+
+        <!-- =======================================================
+        * Template Name: ComingSoon - v4.6.0
+        * Template URL: https://bootstrapmade.com/comingsoon-free-html-bootstrap-template/
+        * Author: BootstrapMade.com
+        * License: https://bootstrapmade.com/license/
+        ======================================================== -->
+    </head>
+
+    <body>
+
+        <!-- ======= Header ======= -->
+        <header id="header" th:replace="layout/plantilla :: header"></header>
+        <!-- End #header -->
+
+        <main id="main">
+
+            <section id="contact" class="contact">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Agregar Servicios</h2>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <form th:action="@{/lanuan/admin/servicios/guardar_servicio}" method="post" th:object="${servicio}" name="formulario" role="form" class="php-email-form">
+                                <div class="row">
+                                    <div class="form-group mt-3">
+                                        <label for="nombre">Nombre del Servicio</label>
+                                        <textarea class="form-control" name="nombre" maxlength="100" th:field="*{nombre}" rows="5" placeholder="Nombre" required></textarea>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="descripcion">Descripcion del Servicio</label>
+                                        <textarea class="form-control" name="descripcion" maxlength="255" th:field="*{descripcion}" rows="5" placeholder="Descripcion" required></textarea>
+                                    </div>
+                                    <div class="form-group mt-3 mb-3">
+                                        <label for="file" class="form-label">Sube una imagen:</label>
+                                        <input class="form-control" name="file" type="file" accept="image/png, image/jpeg" id="formFile" required>
+                                        <input type="text" name="foto" id="foto" hidden="true" th:field="*{foto}">
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="button" onclick="subirArchivo('servicios')" class="btn btn-primary">Guardar</button>
+                                        <a th:href="@{/lanuan/admin/servicios}" class="btn btn-secondary">Regresar</a>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End Contact Us Section -->
+
+        </main><!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer" th:replace="layout/plantilla :: footer"></footer>
+        <!-- End #footer -->
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="/assets/js/main.js"></script>
+        
+        <script type="text/javascript" src="/assets/js/firebase-app.js"></script>
+        <script type="text/javascript" src="/assets/js/firebase-auth.js"></script>
+        <script type="text/javascript" src="/assets/js/firebase-storage.js"></script>
+        <script type="text/javascript" src="/assets/js/firebase.js"></script>
+
+    </body>
+</html>

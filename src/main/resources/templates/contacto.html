@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>CONTACTO</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="/assets/img/Lanuan sis.png" rel="icon">
+        <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+            rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="/assets/css/style.css" rel="stylesheet">
+
+        <!-- =======================================================
+      * Template Name: ComingSoon - v4.6.0
+      * Template URL: https://bootstrapmade.com/comingsoon-free-html-bootstrap-template/
+      * Author: BootstrapMade.com
+      * License: https://bootstrapmade.com/license/
+      ======================================================== -->
+    </head>
+
+    <body>
+
+        <!-- ======= Header ======= -->
+        <header id="header" th:replace="layout/plantilla :: header"></header>
+        <!-- End #header -->
+
+        <main id="main">
+
+            <section id="contact" class="contact">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <form th:action="@{/lanuan/admin/contacto/Actualizar_Contacto}" method="post" th:object='${inicio}' role="form" class="php-email-form">
+                                <h2 class="text-center py-5 font-weight-bold">Datos de Contacto</h2>
+                                <div class="row">
+                                    <div class="form-group mt-3">
+                                        <label for="numero">Numero de Telefono</label>
+                                        <input type="text" class="form-control" maxlength="100" name="numero" th:filed='*{numero}' rows="5" th:value="#{inicio.numero}" th:field='*{numero}' required>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="correo">Correo de Contacto</label>
+                                        <input type="email" class="form-control" maxlength="100" name="correo" th:filed='*{correo}' rows="5" th:value="#{inicio.correo}" th:field='*{correo}' required>
+                                    </div>
+                                    <h2 class="text-center py-5 font-weight-bold">Horario de Atencion</h2>
+                                    <div class="form-group mt-3">
+                                        <label for="semana">Lunes a Viernes</label>
+                                        <textarea class="form-control" name="semana" maxlength="255" th:field='*{semana}' rows="5" placeholder="Horario Semanal"
+                                                required></textarea>
+                                    </div>
+                                    <div class="form-group mt-3">
+                                        <label for="fin_semana">Sabados</label>
+                                        <textarea class="form-control" name="fin_semana" maxlength="255" th:field='*{fin_semana}' rows="5" placeholder="Horario Fin de Semana"
+                                                required></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type='submit' class="btn btn-primary">Actualizar</button>
+                                        <a th:href="@{/lanuan/admin/}" class="btn btn-secondary">Regresar</a>
+                                    </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section><!-- End Contact Us Section -->
+
+        </main><!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer" th:replace="layout/plantilla :: footer"></footer>
+        <!-- End #footer -->
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="/assets/js/main.js"></script>
+
+    </body>
+
+</html>
